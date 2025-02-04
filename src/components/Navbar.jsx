@@ -7,8 +7,7 @@ function Navbar() {
             </div>
             
             <div className="logo-container">
-                <p>KevTech</p>
-                <img src="./src/assets/Designer.png" alt="KevTech-logo" />
+                <img src="./src/assets/KevTech.png" alt="KevTech-logo" />
             </div>
         </nav>
     )
