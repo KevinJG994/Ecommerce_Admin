@@ -2,7 +2,6 @@ import { useState } from "react";
 import dataList from '../../data.json'
 import ItemCard from "./ItemCard";
 import { Link } from "react-router-dom";
-import ItemDetailsPage from "../pages/ItemDetailsPage";
 
 function List() {
     const [list, setList] = useState(dataList)
@@ -23,11 +22,12 @@ function List() {
                         <Link to={`/ItemDetailsPage/${listed.id}`}>
                             <ItemCard listItem={listed} />
                         </Link>
+                        <div className="deleteButton-container">
                             <button onClick={() => deleteList(listed.id)}>
-                                Delete
+                            <i class="fa-solid fa-x"></i>
                             </button>
+                            </div>
                     </div>
-
                 );
             })}
         </div>
