@@ -1,6 +1,8 @@
 import { useState } from "react";
 import dataList from '../../data.json'
 import ItemCard from "./ItemCard";
+import { Link } from "react-router-dom";
+import ItemDetailsPage from "../pages/ItemDetailsPage";
 
 function List() {
     const [list, setList] = useState(dataList)
@@ -18,11 +20,14 @@ function List() {
             {list.map((listed) => {
                 return (
                     <div key={listed.id}>
-                        <ItemCard listItem={listed} />
-                        <button onClick={() => deleteList(listed.id)}>
-                            Delete
-                        </button>
+                        <Link to={`/ItemDetailsPage/${listed.id}`}>
+                            <ItemCard listItem={listed} />
+                        </Link>
+                            <button onClick={() => deleteList(listed.id)}>
+                                Delete
+                            </button>
                     </div>
+
                 );
             })}
         </div>
