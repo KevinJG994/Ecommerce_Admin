@@ -77,3 +77,17 @@ footer a {
 footer i {
   margin-right: 10px;
 }
+
+
+.ItemCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 3px black;
+  padding: 10px;
+}
+
+.ItemCard-image,
+.ItemCard-thumbnail {
+  width: 100px;
+}
