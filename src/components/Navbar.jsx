@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Navbar() {
     return (
         <nav>
@@ -5,9 +7,11 @@ function Navbar() {
                 <i class="fa-solid fa-bars"></i>
                 <p>Products</p>
             </div>
-            
+
             <div className="logo-container">
-                <img src="./src/assets/KevTech.png" alt="KevTech-logo" />
+                <Link to="/">
+                    <img src="./src/assets/KevTech.png" alt="KevTech-logo" />
+                </Link>
             </div>
         </nav>
     )

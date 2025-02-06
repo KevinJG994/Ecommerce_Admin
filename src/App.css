@@ -33,11 +33,12 @@ nav p {
 }
 
 aside {
-  width: 200px;
+  width: 20%;
   height: 80vh;
   display: flex;
   flex-direction: column;
   box-shadow: 3px 0 5px -2px rgba(136, 136, 136, 0.5);
+  z-index: 1;
 }
 
 .list-link {
@@ -48,7 +49,7 @@ aside {
   margin: 20px auto;
   padding-bottom: 10px;
   width: 80%;
-  box-shadow: 0 1px 0 0 rgba(136, 136, 136, 0.5); 
+  box-shadow: 0 1px 0 0 rgba(136, 136, 136, 0.5);
 }
 
 .list-link li a {
@@ -90,4 +91,108 @@ footer i {
 .ItemCard-image,
 .ItemCard-thumbnail {
   width: 100px;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 20px;
+  height: 80vh;
+  width: 80%;
+  scroll-behavior: auto;
+  overflow-y: auto;
+  max-height: 80vh;
+  background-color: rgb(248, 248, 248);
+}
+
+.dashboard div {
+  padding: 10px 0;
+  width: 100%;
+}
+
+.main-content {
+  display: flex;
+  height: 80vh;
+}
+
+.pageNotFound {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: rgb(248, 248, 248);
+}
+
+.pageNotFound img {
+  margin: 20px auto;
+  width: 500px;
+}
+
+.pageNotFound img {
+  margin: 20px auto;
+  width: 500px;
+}
+
+.pageNotFound button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: purple;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pageNotFound button:hover {
+  background-color: rgb(196, 3, 196);
+}
+
+.aboutPanel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: rgb(248, 248, 248);
+}
+
+.aboutPanel h2 {
+  margin: 20px auto;
+}
+
+.aboutPanel p {
+  width: 70%;
+  text-align: center;
+}
+
+.developer_profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.developer_profile img {
+  width: 200px;
+  margin: 50px auto 20px auto;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 2));
+}
+
+.developer_profile li {
+  list-style: none;
+  margin: 20px auto;
+}
+
+.developer_profile i {
+  margin: auto 5px;
+}
+
+.developer_profile li a {
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
 }

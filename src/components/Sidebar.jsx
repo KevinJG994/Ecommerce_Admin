@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Sidebar() {
     return (
         <aside>
@@ -9,7 +11,9 @@ function Sidebar() {
                     <a href="">Add Products</a>
                 </li>
                 <li>
-                    <a href="">About</a>
+                    <Link to="/about">
+                        <a href="">About</a>
+                    </Link>
                 </li>
             </ul>
         </aside>
