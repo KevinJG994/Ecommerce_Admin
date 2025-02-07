@@ -4,7 +4,7 @@ function Navbar() {
     return (
         <nav>
             <div className="menu-container">
-                <i class="fa-solid fa-bars"></i>
+                <i className="fa-solid fa-bars"></i>
                 <p>Products</p>
             </div>
 

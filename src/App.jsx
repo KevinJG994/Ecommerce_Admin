@@ -9,6 +9,7 @@ import DashBoardPage from './pages/DashboardPage'
 import AboutPage from './pages/AboutPage'
 import NotFoundPage from './pages/NotFoundPage'
 import ItemDetailsPage from './pages/ItemDetailsPage'
+import Form from './components/Form'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <Sidebar />
         <Routes>
           <Route path="/" element={<DashBoardPage />} />
+          <Route path="/form" element={<Form />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/ItemDetailsPage/:itemId" element= {<ItemDetailsPage />}/>
           <Route path="*" element={<NotFoundPage />} />
