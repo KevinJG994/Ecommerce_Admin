@@ -5,14 +5,18 @@ function Sidebar() {
         <aside>
             <ul className="list-link">
                 <li>
-                    <a href="">Products</a>
+                    <Link to="/">
+                        Products
+                    </Link>
                 </li>
                 <li>
-                    <a href="">Add Products</a>
+                    <Link to="/addProduct">
+                        Add Products
+                    </Link>
                 </li>
                 <li>
                     <Link to="/about">
-                        <a href="">About</a>
+                        About
                     </Link>
                 </li>
             </ul>

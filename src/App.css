@@ -343,3 +343,8 @@ form button {
 form button:hover {
   background-color: rgb(196, 3, 196);
 }
+
+.form-image {
+  width: 100px;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 2));
+}

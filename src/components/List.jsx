@@ -24,7 +24,7 @@ function List() {
                         </Link>
                         <div className="deleteButton-container">
                             <button onClick={() => deleteList(listed.id)}>
-                            <i class="fa-solid fa-x"></i>
+                            <i className="fa-solid fa-x"></i>
                             </button>
                             </div>
                     </div>

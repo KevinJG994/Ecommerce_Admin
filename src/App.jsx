@@ -20,7 +20,7 @@ function App() {
         <Sidebar />
         <Routes>
           <Route path="/" element={<DashBoardPage />} />
-          <Route path="/form" element={<Form />} />
+          <Route path="/addProduct" element={<Form />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/ItemDetailsPage/:itemId" element= {<ItemDetailsPage />}/>
           <Route path="*" element={<NotFoundPage />} />
