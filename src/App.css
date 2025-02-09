@@ -284,11 +284,7 @@ footer i {
 
 /* Form Styles */
 .form-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 20px;
+  margin: auto;
 }
 
 form {
@@ -312,7 +308,7 @@ form h2 {
 
 .form-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
@@ -330,7 +326,8 @@ form select {
 }
 
 form button {
-  margin-top: 20px;
+  display: flex;
+  margin: 30px auto 10px;
   padding: 10px 20px;
   font-size: 16px;
   background-color: purple;

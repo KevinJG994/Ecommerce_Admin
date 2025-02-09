@@ -9,6 +9,7 @@ export default function Form() {
     const [stock, setStock] = useState()
     const [price, setPrice] = useState()
     const [category, setCategory] = useState("")
+    const [operatingSystem, setOperatingSystem] = useState("")
 
     const handleName = e => setName(e.target.value);
     const handleImage = e => setImage(e.target.value);
@@ -18,18 +19,19 @@ export default function Form() {
     const handleStock = e => setStock(e.target.value);
     const handlePrice = e => setPrice(e.target.value);
     const handleCategory = e => setCategory(e.target.value);
+    const handleOperatingSystem = e => setOperatingSystem(e.target.value);
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const newProduct = { name, description, image, brand, model, stock, price, category }
+        const newProduct = { name, description, image, brand, model, stock, price, category, operatingSystem }
 
         console.log("Submitted: ", newProduct);
 
         clearForm()
     }
 
-    function clearForm(){
+    function clearForm() {
         setName("")
         setDescription("")
         setImage("")
@@ -38,6 +40,7 @@ export default function Form() {
         setStock("")
         setPrice("")
         setCategory("")
+        setOperatingSystem("")
     }
 
 
@@ -63,10 +66,18 @@ export default function Form() {
                     <input name="Price" type="text" placeholder="Price" value={parseFloat.price} onChange={handlePrice} required />
 
                     <select name="Category" value={category} onChange={handleCategory} required>
-                        <option value="">----</option>
-                        <option value="phone">SmartPhone</option>
-                        <option value="laptop">Laptop</option>
-                        <option value="tablet">Tablet</option>
+                        <option value="" disabled>Category</option>
+                        <option value="SmartPhone">SmartPhone</option>
+                        <option value="Laptop">Laptop</option>
+                        <option value="Tablet">Tablet</option>
+                    </select>
+
+                    <select name="OperatingSystem" value={operatingSystem} onChange={handleOperatingSystem} required>
+                        <option value="" disabled>Operating System</option>
+                        <option value="Windows">Windows</option>
+                        <option value="macOs">macOs</option>
+                        <option value="Android">Android</option>
+                        <option value="iOs">iOs</option>
                     </select>
 
                 </div>
