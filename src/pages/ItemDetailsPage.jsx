@@ -20,6 +20,7 @@ function ItemDetailsPage() {
                 <p><span>Brand: </span>{dataItems.brand}</p>
                 <p><span>Model:</span> {dataItems.model}</p>
                 <p><span>Category:</span> {dataItems.category}</p>
+                <p><span>Operating System:</span> {dataItems.operating_system}</p>
                 <p><span>Stock:</span> {dataItems.stock}</p>
                 <p><span>Price:</span> {dataItems.price}$</p>
             </div>

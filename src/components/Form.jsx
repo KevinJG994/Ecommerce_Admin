@@ -58,9 +58,9 @@ export default function Form() {
 
                     <input name="Model" type="text" placeholder="Model" value={model} onChange={handleModel} required />
 
-                    <input name="Stock" type="number" placeholder="Stock" value={stock} onChange={handleStock} required />
+                    <input name="Stock" type="number" placeholder="Stock" value={parseInt.stock} onChange={handleStock} required />
 
-                    <input name="Price" type="number" placeholder="Price" value={price} onChange={handlePrice} required />
+                    <input name="Price" type="text" placeholder="Price" value={parseFloat.price} onChange={handlePrice} required />
 
                     <select name="Category" value={category} onChange={handleCategory} required>
                         <option value="">----</option>

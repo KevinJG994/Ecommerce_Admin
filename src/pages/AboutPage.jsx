@@ -10,13 +10,13 @@ function AboutPage() {
                 <ul>
                     <li>
                         <a href="https://www.linkedin.com/in/kevin-jim%C3%A9nez94/" target="_blank">
-                            <i class="fa-brands fa-linkedin"></i>
+                            <i className="fa-brands fa-linkedin"></i>
                             Linkedin
                         </a>
                     </li>
                     <li>
                         <a href="https://github.com/KevinJG994/Ecommerce_Admin" target="_blank">
-                            <i class="fa-brands fa-square-github"></i>
+                            <i className="fa-brands fa-square-github"></i>
                             GitHub
                         </a>
                     </li>

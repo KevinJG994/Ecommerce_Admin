@@ -20,13 +20,8 @@ function List() {
                 return (
                     <div key={listed.id}>
                         <Link to={`/ItemDetailsPage/${listed.id}`}>
-                            <ItemCard listItem={listed} />
+                            <ItemCard listItem={listed} deleteList={deleteList}/>
                         </Link>
-                        <div className="deleteButton-container">
-                            <button onClick={() => deleteList(listed.id)}>
-                            <i className="fa-solid fa-x"></i>
-                            </button>
-                            </div>
                     </div>
                 );
             })}
