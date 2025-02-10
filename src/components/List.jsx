@@ -16,11 +16,19 @@ function List() {
 
     return (
         <div>
+            <div className="listHeader">
+                <p>Image</p>
+                <p>Name</p>
+                <p>Brand</p>
+                <p>Model</p>
+                <p>Price</p>
+                <p>Delete</p>
+            </div>
             {list.map((listed) => {
                 return (
                     <div key={listed.id}>
                         <Link to={`/ItemDetailsPage/${listed.id}`}>
-                            <ItemCard listItem={listed} deleteList={deleteList}/>
+                            <ItemCard listItem={listed} deleteList={deleteList} />
                         </Link>
                     </div>
                 );

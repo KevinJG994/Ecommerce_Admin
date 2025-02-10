@@ -26,6 +26,7 @@ export default function Form() {
 
         const newProduct = { name, description, image, brand, model, stock, price, category, operatingSystem }
 
+
         console.log("Submitted: ", newProduct);
 
         clearForm()

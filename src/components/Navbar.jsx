@@ -1,11 +1,17 @@
-import { Link } from "react-router-dom";
+
+import { Link, useLocation } from "react-router-dom";
 
 function Navbar() {
+    const location = useLocation();
+    const navTag = location.pathname === "/" ? "Products" :
+                   location.pathname === "/addProduct" ? "Add Product" :
+                   location.pathname === "/about" ? "About" : "";
+
     return (
         <nav>
             <div className="menu-container">
                 <i className="fa-solid fa-bars"></i>
-                <p>Products</p>
+                <p>{navTag}</p>
             </div>
 
             <div className="logo-container">
