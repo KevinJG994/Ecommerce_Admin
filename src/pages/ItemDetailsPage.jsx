@@ -1,10 +1,12 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import dataList from '../../data.json'
+import UpdateForm from "../components/UpdateForm";
 
 function ItemDetailsPage() {
     const { itemId } = useParams();
 
     const dataItems = dataList.find((item) => item.id === parseInt(itemId));
+
     return (
         <div className="ItemsDetails-panel">
             <div className="ItemsDetails-header">
@@ -24,6 +26,9 @@ function ItemDetailsPage() {
                 <p><span>Stock:</span> {dataItems.stock}</p>
                 <p><span>Price:</span> {dataItems.price}$</p>
             </div>
+
+
+            {/* <button onClick={<UpdateForm dataItems={dataItems} />}>Editame</button> */}
         </div >
     )
 }

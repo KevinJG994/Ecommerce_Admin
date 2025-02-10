@@ -10,6 +10,7 @@ import AboutPage from './pages/AboutPage'
 import NotFoundPage from './pages/NotFoundPage'
 import ItemDetailsPage from './pages/ItemDetailsPage'
 import Form from './components/Form'
+import UpdateForm from './components/UpdateForm'
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
           <Route path="/addProduct" element={<Form />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/ItemDetailsPage/:itemId" element= {<ItemDetailsPage />}/>
+          <Route path="/updateForm" element={<UpdateForm />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </div>
