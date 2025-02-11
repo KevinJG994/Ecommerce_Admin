@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 
-export default function UpdateForm({dataItems}) {
+export default function UpdateForm({dataItems, onFormSubmit}) {
+    
     const [name, setName] = useState(dataItems.name)
     const [description, setDescription] = useState(dataItems.description)
     const [image, setImage] = useState(dataItems.image)
@@ -28,6 +28,8 @@ export default function UpdateForm({dataItems}) {
         const updateProduct = { name, description, image, brand, model, stock, price, category, operatingSystem }
 
         console.log("Updated: ", updateProduct);
+        
+        onFormSubmit();
     }
 
     return (

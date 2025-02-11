@@ -1,6 +1,9 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Form() {
+    const navigate = useNavigate()
+
     const [name, setName] = useState("")
     const [description, setDescription] = useState("")
     const [image, setImage] = useState("")
@@ -30,6 +33,8 @@ export default function Form() {
         console.log("Submitted: ", newProduct);
 
         clearForm()
+
+        navigate("/");
     }
 
     function clearForm() {

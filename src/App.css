@@ -377,3 +377,19 @@ form button:hover {
   font-size: 1.2rem;
   font-weight: bold;
 }
+
+.editButton {
+  padding: 10px;
+  background-color: purple;
+  color: white;
+  border-radius: 20px;
+  border: none;
+  width: 100px;
+  font-size: 1.2rem;
+  margin: auto;
+}
+
+.editButton:hover {
+  cursor: pointer;
+  background-color: rgb(196, 3, 196);
+}

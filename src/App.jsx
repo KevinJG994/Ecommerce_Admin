@@ -24,7 +24,7 @@ function App() {
           <Route path="/addProduct" element={<Form />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/ItemDetailsPage/:itemId" element= {<ItemDetailsPage />}/>
-          <Route path="/updateForm" element={<UpdateForm />} />
+          {/* <Route path="/updateProduct" element={<UpdateForm />} /> */}
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </div>
