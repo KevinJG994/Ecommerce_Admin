@@ -386,7 +386,7 @@ form button:hover {
   border: none;
   width: 100px;
   font-size: 1.2rem;
-  margin: auto;
+  margin: 20px auto 0;
 }
 
 .editButton:hover {

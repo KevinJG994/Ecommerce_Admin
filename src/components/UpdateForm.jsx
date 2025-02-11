@@ -25,11 +25,11 @@ export default function UpdateForm({dataItems, onFormSubmit}) {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const updateProduct = { name, description, image, brand, model, stock, price, category, operatingSystem }
+        const updateProduct = {  id: dataItems.id, name, description, image, brand, model, stock, price, category, operatingSystem }
 
         console.log("Updated: ", updateProduct);
         
-        onFormSubmit();
+        onFormSubmit(updateProduct);
     }
 
     return (

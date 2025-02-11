@@ -1,19 +1,19 @@
 import { useParams } from "react-router-dom";
-import dataList from '../../data.json'
-import UpdateForm from "../components/UpdateForm";
 import { useState } from "react";
+import UpdateForm from "../components/UpdateForm";
 
-function ItemDetailsPage() {
+function ItemDetailsPage({products, updateProduct}) {
     const { itemId } = useParams();
     const [showUpdateForm, setShowUpdateForm] = useState(false);
 
-    const dataItems = dataList.find((item) => item.id === parseInt(itemId));
+    const dataItems = products.find((item) => item.id === parseInt(itemId));
 
     const handleEditClick = () => {
         setShowUpdateForm(true);
     };
 
-    const handleFormSubmit = () => {
+    const handleFormSubmit = (updatedProduct) => {
+        updateProduct(updatedProduct)
         setShowUpdateForm(false);
     };
 
@@ -35,7 +35,7 @@ function ItemDetailsPage() {
                         <p><span>Brand: </span>{dataItems.brand}</p>
                         <p><span>Model:</span> {dataItems.model}</p>
                         <p><span>Category:</span> {dataItems.category}</p>
-                        <p><span>Operating System:</span> {dataItems.operating_system}</p>
+                        <p><span>Operating System:</span> {dataItems.operatingSystem}</p>
                         <p><span>Stock:</span> {dataItems.stock}</p>
                         <p><span>Price:</span> {dataItems.price}$</p>
                     </div>
