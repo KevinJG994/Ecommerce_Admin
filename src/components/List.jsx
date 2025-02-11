@@ -1,17 +1,11 @@
-import { useState } from "react";
-import dataList from '../../data.json'
 import ItemCard from "./ItemCard";
 import { Link } from "react-router-dom";
 
-function List() {
-    const [list, setList] = useState(dataList)
-
+function List({ products }) {
     const deleteList = (listId) => {
-        const filteredList = list.filter((listed) => {
+        const filteredList = products.filter((listed) => {
             return listed.id !== listId;
         });
-
-        setList(filteredList)
     };
 
     return (
@@ -24,10 +18,10 @@ function List() {
                 <p>Price</p>
                 <p>Delete</p>
             </div>
-            {list.map((listed) => {
+            {products.map((listed) => {
                 return (
                     <div key={listed.id}>
-                        <Link to={`/ItemDetailsPage/${listed.id}`}>
+                        <Link to={`/ItemDetailsPage/${listed.id}`} >
                             <ItemCard listItem={listed} deleteList={deleteList} />
                         </Link>
                     </div>

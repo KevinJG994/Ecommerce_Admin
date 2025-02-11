@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function Form() {
+export default function Form({ addProduct }) {
     const navigate = useNavigate()
 
     const [name, setName] = useState("")
@@ -27,10 +27,11 @@ export default function Form() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const newProduct = { name, description, image, brand, model, stock, price, category, operatingSystem }
-
+        const newProduct = { id: 31, name, description, image, brand, model, stock, price, category, operatingSystem }
 
         console.log("Submitted: ", newProduct);
+
+        addProduct(newProduct)
 
         clearForm()
 

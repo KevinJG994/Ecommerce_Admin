@@ -10,27 +10,32 @@ import AboutPage from './pages/AboutPage'
 import NotFoundPage from './pages/NotFoundPage'
 import ItemDetailsPage from './pages/ItemDetailsPage'
 import Form from './components/Form'
-import UpdateForm from './components/UpdateForm'
+import dataList from '../data.json'
+import { useState } from 'react'
 
 function App() {
+  const [products, setProducts] = useState(dataList);
+
+  const addProduct = (newProduct) => {
+    setProducts([...products, newProduct]);
+  };
 
   return (
     <div className='App'>
-      <Navbar/>
+      <Navbar />
       <div className='main-content'>
         <Sidebar />
         <Routes>
-          <Route path="/" element={<DashBoardPage />} />
-          <Route path="/addProduct" element={<Form />} />
+          <Route path="/" element={<DashBoardPage products={products}/>} />
+          <Route path="/addProduct" element={<Form  addProduct={addProduct}/>} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/ItemDetailsPage/:itemId" element= {<ItemDetailsPage />}/>
-          {/* <Route path="/updateProduct" element={<UpdateForm />} /> */}
+          <Route path="/ItemDetailsPage/:itemId" element={<ItemDetailsPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </div>
-      <Footer/>
+      <Footer />
 
- 
+
     </div>
   )
 }
