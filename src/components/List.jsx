@@ -1,12 +1,11 @@
 import ItemCard from "./ItemCard";
 import { Link } from "react-router-dom";
 
-function List({ products }) {
-    const deleteList = (listId) => {
-        const filteredList = products.filter((listed) => {
-            return listed.id !== listId;
-        });
-    };
+function List({ products,deleteProduct }) {
+
+    const handleDelete = (listId) => {
+        deleteProduct(listId)
+        };
 
     return (
         <div>
@@ -22,7 +21,7 @@ function List({ products }) {
                 return (
                     <div key={listed.id}>
                         <Link to={`/ItemDetailsPage/${listed.id}`} >
-                            <ItemCard listItem={listed} deleteList={deleteList} />
+                            <ItemCard listItem={listed} deleteList={handleDelete} />
                         </Link>
                     </div>
                 );

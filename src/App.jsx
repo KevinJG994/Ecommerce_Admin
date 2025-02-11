@@ -17,6 +17,10 @@ import Form from './components/Form'
 function App() {
   const [products, setProducts] = useState(dataList);
 
+  const deleteProduct = (productId) => {
+    setProducts(products.filter(product => product.id !== productId));
+  };
+
   const addProduct = (newProduct) => {
     setProducts([...products, newProduct]);
   };
@@ -33,7 +37,7 @@ function App() {
       <div className='main-content'>
         <Sidebar />
         <Routes>
-          <Route path="/" element={<DashBoardPage products={products}/>} />
+          <Route path="/" element={<DashBoardPage products={products} deleteProduct={deleteProduct}/>} />
           <Route path="/addProduct" element={<Form  addProduct={addProduct}/>} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/ItemDetailsPage/:itemId" element={<ItemDetailsPage products={products} updateProduct={updateProduct}/>}  />

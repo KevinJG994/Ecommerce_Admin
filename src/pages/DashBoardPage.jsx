@@ -1,9 +1,9 @@
 import List from '../components/List'
 
-function DashBoardPage({ products }) {
+function DashBoardPage({ products, deleteProduct }) {
     return (
         <div className='dashboard'>
-            <List products={products} />
+            <List products={products} deleteProduct={deleteProduct} />
         </div>
     )
 }
