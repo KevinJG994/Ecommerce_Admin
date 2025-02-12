@@ -1,11 +1,11 @@
 import ItemCard from "./ItemCard";
 import { Link } from "react-router-dom";
 
-function List({ products,deleteProduct }) {
+function List({ products, deleteProduct }) {
 
     const handleDelete = (listId) => {
         deleteProduct(listId)
-        };
+    };
 
     return (
         <div>

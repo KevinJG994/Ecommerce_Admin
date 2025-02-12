@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useState } from "react";
 import UpdateForm from "../components/UpdateForm";
 
-function ItemDetailsPage({products, updateProduct}) {
+function ItemDetailsPage({ products, updateProduct }) {
     const { itemId } = useParams();
     const [showUpdateForm, setShowUpdateForm] = useState(false);
 
@@ -19,7 +19,7 @@ function ItemDetailsPage({products, updateProduct}) {
 
     return (
         <div className="ItemsDetails-panel">
-             {showUpdateForm ? (
+            {showUpdateForm ? (
                 <UpdateForm dataItems={dataItems} onFormSubmit={handleFormSubmit} />
             ) : (
                 <>
@@ -39,7 +39,6 @@ function ItemDetailsPage({products, updateProduct}) {
                         <p><span>Stock:</span> {dataItems.stock}</p>
                         <p><span>Price:</span> {dataItems.price}$</p>
                     </div>
-
                     <button onClick={handleEditClick} className="editButton">Edit</button>
                 </>
             )}

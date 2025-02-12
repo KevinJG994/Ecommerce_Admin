@@ -1,101 +1,9 @@
-* {
-  padding: 0;
-  margin: 0;
-  text-decoration: none;
-}
-
-.App {
-  height: 100vh;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 30px;
-  background-color: purple;
-  color: white;
-  height: 12vh;
-}
-
-.list-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 10px;
-}
+/* ItemCard Styles */
 
 .ItemCard {
   flex-grow: 1;
   text-decoration: none;
 }
-
-.deleteButton-container {
-  flex-shrink: 0;
-}
-
-nav p {
-  margin: 0 20px
-}
-
-.menu-container,
-.logo-container {
-  display: flex;
-  align-items: center;
-  font-size: 1.3rem;
-}
-
-.logo-container img {
-  width: 100px;
-}
-
-aside {
-  width: 20%;
-  height: 80vh;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 3px 0 5px -2px rgba(136, 136, 136, 0.5);
-  z-index: 1;
-}
-
-.list-link {
-  list-style: none;
-}
-
-.list-link li {
-  margin: 20px auto;
-  padding-bottom: 10px;
-  width: 80%;
-  box-shadow: 0 1px 0 0 rgba(136, 136, 136, 0.5);
-}
-
-.list-link li a {
-  display: flex;
-  justify-content: center;
-  text-decoration: none;
-  color: black;
-  font-size: 1.3rem;
-}
-
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: purple;
-  height: 8vh;
-}
-
-footer a {
-  text-decoration: none;
-  color: white;
-  font-size: 1.3rem;
-  margin: auto;
-}
-
-footer i {
-  margin-right: 10px;
-}
-
 
 .ItemCard {
   display: flex;
@@ -120,6 +28,8 @@ footer i {
   color: black;
 }
 
+/* DashBoard Styles */
+
 .dashboard {
   display: flex;
   flex-direction: column;
@@ -143,6 +53,7 @@ footer i {
   height: 80vh;
 }
 
+/* PageNotFound Styles */
 .pageNotFound {
   display: flex;
   flex-direction: column;
@@ -177,6 +88,8 @@ footer i {
   background-color: rgb(196, 3, 196);
 }
 
+
+/* AboutPage Styles */
 .aboutPanel {
   display: flex;
   flex-direction: column;
@@ -202,7 +115,6 @@ footer i {
   align-items: center;
 }
 
-
 .developer_profile img {
   width: 200px;
   margin: 50px auto 20px auto;
@@ -224,6 +136,7 @@ footer i {
   text-decoration: none;
 }
 
+/* ItemDetailsPage Styles */
 .ItemsDetails-panel {
   display: flex;
   flex-direction: column;
@@ -285,7 +198,7 @@ footer i {
 }
 
 
-/* Form Styles */
+/* Forms Styles */
 .form-container {
   margin: auto;
 }

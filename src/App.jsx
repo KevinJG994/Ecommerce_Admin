@@ -26,7 +26,7 @@ function App() {
   };
 
   const updateProduct = (updatedProduct) => {
-    setProducts(products.map(product => 
+    setProducts(products.map(product =>
       product.id === updatedProduct.id ? updatedProduct : product
     ));
   };
@@ -37,16 +37,14 @@ function App() {
       <div className='main-content'>
         <Sidebar />
         <Routes>
-          <Route path="/" element={<DashBoardPage products={products} deleteProduct={deleteProduct}/>} />
-          <Route path="/addProduct" element={<Form  addProduct={addProduct}/>} />
+          <Route path="/" element={<DashBoardPage products={products} deleteProduct={deleteProduct} />} />
+          <Route path="/addProduct" element={<Form addProduct={addProduct} />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/ItemDetailsPage/:itemId" element={<ItemDetailsPage products={products} updateProduct={updateProduct}/>}  />
+          <Route path="/ItemDetailsPage/:itemId" element={<ItemDetailsPage products={products} updateProduct={updateProduct} />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </div>
       <Footer />
-
-
     </div>
   )
 }

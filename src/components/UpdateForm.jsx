@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-export default function UpdateForm({dataItems, onFormSubmit}) {
-    
+export default function UpdateForm({ dataItems, onFormSubmit }) {
+
     const [name, setName] = useState(dataItems.name)
     const [description, setDescription] = useState(dataItems.description)
     const [image, setImage] = useState(dataItems.image)
@@ -25,10 +25,10 @@ export default function UpdateForm({dataItems, onFormSubmit}) {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const updateProduct = {  id: dataItems.id, name, description, image, brand, model, stock, price, category, operatingSystem }
+        const updateProduct = { id: dataItems.id, name, description, image, brand, model, stock, price, category, operatingSystem }
 
         console.log("Updated: ", updateProduct);
-        
+
         onFormSubmit(updateProduct);
     }
 
@@ -67,7 +67,7 @@ export default function UpdateForm({dataItems, onFormSubmit}) {
                         <option value="Android">Android</option>
                         <option value="iOs">iOs</option>
                     </select>
-                </div>  
+                </div>
                 <button type="submit" >Edit Product</button>
             </form>
         </div>
