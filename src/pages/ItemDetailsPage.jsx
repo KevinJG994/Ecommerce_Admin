@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useState } from "react";
 import UpdateForm from "../components/UpdateForm";
 
@@ -17,6 +17,7 @@ function ItemDetailsPage({ products, updateProduct }) {
         setShowUpdateForm(false);
     };
 
+
     return (
         <div className="ItemsDetails-panel">
             {showUpdateForm ? (
@@ -24,6 +25,9 @@ function ItemDetailsPage({ products, updateProduct }) {
             ) : (
                 <>
                     <div className="ItemsDetails-header">
+                        <Link to="/">
+                            <i className="fa-solid fa-arrow-left backArrow"></i>
+                        </Link>
                         <img src={dataItems.image} alt="product-img" className="ItemsDetails-image" />
                         <div className="ItemsDetails-info">
                             <h2 className="ItemsDetails-title">{dataItems.name}</h2>
